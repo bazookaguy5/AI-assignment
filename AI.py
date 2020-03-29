@@ -38,7 +38,7 @@ def print_result(states):
     actions = []
 
     for i in range(len(states)-1):
-        for j in range(M):
+        for j in range(N):
             if transition_table[states[i]][j] == states[i+1]:
                 actions.append(rules[j])
                 break
@@ -48,7 +48,6 @@ def print_result(states):
 for test_case in test_cases:
     visited = []
     frontier = []
-    answer = []
     frontier.append((test_case['start'],))
     visited.append(test_case['start'])
 
